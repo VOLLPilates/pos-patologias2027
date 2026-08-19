@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vollpilates.com.br/pos-internacional/sitemap.xml
