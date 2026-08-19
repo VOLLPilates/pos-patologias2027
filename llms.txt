@@ -16,7 +16,7 @@ O site principal apresenta a historia do Grupo VOLL, seus produtos, servicos, ca
 - [Nossa historia](https://vollpilates.com.br/nossa-historia/): historia e posicionamento institucional do Grupo VOLL.
 - [Cursos de Pilates](https://vollpilates.com.br/cursos/): cursos de formacao e especializacao em Pilates.
 - [Pos-Graduacao](https://vollpilates.com.br/pos-graduacao/): area de pos-graduacoes ligadas ao metodo Pilates e movimento.
-- [Pos-Graduacao Internacional](https://vollpilates.com.br/pos-internacional/): landing page da Pos-Graduacao Internacional em Pilates.
+- [Pos-Graduacao em Pilates para Patologias](https://vollpilates.com.br/pos-patologias/): landing page da Pos-Graduacao em Pilates para Patologias.
 - [Congressos Brasil](https://vollpilates.com.br/eventos/): congressos, eventos e experiencias presenciais no Brasil.
 - [Congressos Internacionais](https://vollpilates.com.br/eventos-internacionais/): eventos internacionais ligados ao ecossistema VOLL.
 - [Aulas de Pilates](https://vollpilates.com.br/aulas-de-pilates/): busca e divulgacao de studios e aulas de Pilates.
@@ -45,9 +45,8 @@ O site principal apresenta a historia do Grupo VOLL, seus produtos, servicos, ca
 
 ## Paginas deste projeto estatico
 
-- [Pos-Graduacao Internacional](https://vollpilates.com.br/pos-internacional/): pagina principal da campanha de Pos-Graduacao Internacional.
-- [Pagina B da Pos-Graduacao Internacional](https://vollpilates.com.br/pos-internacional/b/): variacao da landing page.
-- [Obrigado - Pos-Graduacao Internacional](https://vollpilates.com.br/pos-internacional/obrigado/): pagina de confirmacao apos inscricao.
+- [Pos-Graduacao em Pilates para Patologias](https://vollpilates.com.br/pos-patologias/): pagina principal da campanha de Pos-Graduacao em Pilates para Patologias.
+- [Obrigado - Pos-Graduacao em Pilates para Patologias](https://vollpilates.com.br/pos-patologias/obrigado/): pagina de confirmacao apos inscricao.
 
 ## Observacoes para agentes de IA
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vollpilates.com.br/pos-internacional/sitemap.xml
+Sitemap: https://vollpilates.com.br/pos-patologias/sitemap.xml

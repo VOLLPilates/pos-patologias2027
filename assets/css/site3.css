@@ -1069,7 +1069,11 @@
 }
 
 div.et_pb_section.et_pb_section_0 {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/background_pos-internacional_2026-versaob_opt.webp")!important
+  background-color:transparent!important;
+  background-image:url("../img/background_pos-graduacao-patologias.jpg")!important;
+  background-position:center center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important
 }
 
 .et_pb_section_0.et_pb_section {
@@ -1115,20 +1119,20 @@ div.et_pb_section.et_pb_section_0 {
 }
 
 body #page-container .et_pb_section .et_pb_button_0 {
-  color:#17070e!important;
+  color:#002628!important;
   border-width:4px!important;
-  border-color:#dcac3d;
+  border-color:#ee8c00;
   border-radius:12px;
   font-size:19px;
   font-family:'Poppins', Helvetica, Arial, Lucida, sans-serif!important;
   font-weight:700!important;
-  background-color:#dcac3d
+  background-color:#ee8c00
 }
 
 body #page-container .et_pb_section .et_pb_button_0:hover, body #page-container .et_pb_section .et_pb_button_3:hover, body #page-container .et_pb_section .et_pb_button_4:hover, body #page-container .et_pb_section .et_pb_button_5:hover, body #page-container .et_pb_section .et_pb_button_30:hover, body #page-container .et_pb_section .et_pb_button_31:hover {
-  border-color:#efb943!important;
+  border-color:#ee8c00!important;
   background-image:initial;
-  background-color:#efb943
+  background-color:#ee8c00
 }
 
 body #page-container .et_pb_section .et_pb_button_0:hover:after, body #page-container .et_pb_section .et_pb_button_1:hover:after, body #page-container .et_pb_section .et_pb_button_3:hover:after, body #page-container .et_pb_section .et_pb_button_4:hover:after, body #page-container .et_pb_section .et_pb_button_5:hover:after, body #page-container .et_pb_section .et_pb_button_30:hover:after, body #page-container .et_pb_section .et_pb_button_31:hover:after {
@@ -1290,7 +1294,7 @@ body #page-container .et_pb_section .et_pb_button_0:after, body #page-container 
 
 div.et_pb_section.et_pb_section_2, div.et_pb_section.et_pb_section_6, div.et_pb_section.et_pb_section_7 {
   background-position:center top;
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/background_pos_graduacao_internacional_2026_opt.jpg")!important
+  background-image:url("../img/background_pos_graduacao_internacional_2026_opt.jpg")!important
 }
 
 .et_pb_section_2.et_pb_section, .et_pb_section_6.et_pb_section, .et_pb_section_7.et_pb_section, .et_pb_section_9.et_pb_section, .et_pb_section_10.et_pb_section {
@@ -1532,13 +1536,13 @@ body #page-container .et_pb_section .et_pb_button_2:before, body #page-container
 }
 
 body #page-container .et_pb_section .et_pb_button_3, body #page-container .et_pb_section .et_pb_button_4, body #page-container .et_pb_section .et_pb_button_5, body #page-container .et_pb_section .et_pb_button_30, body #page-container .et_pb_section .et_pb_button_31 {
-  color:#17070e!important;
+  color:#002628!important;
   border-width:4px!important;
-  border-color:#dcac3d;
+  border-color:#ee8c00;
   border-radius:12px;
   font-family:'Poppins', Helvetica, Arial, Lucida, sans-serif!important;
   font-weight:700!important;
-  background-color:#dcac3d
+  background-color:#ee8c00
 }
 
 .et_pb_section_5.et_pb_section {
@@ -1866,7 +1870,7 @@ body #page-container .et_pb_section .et_pb_button_6:hover, body #page-container 
 
 div.et_pb_section.et_pb_section_10 {
   background-position:center top;
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/background_duvidas_frequentes_opt.jpg")!important
+  background-image:url("../img/background_duvidas_frequentes_opt.jpg")!important
 }
 
 .et_pb_text_100 h2 {
@@ -1958,7 +1962,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_57 {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/card_mulher_trabalhando.png");
+  background-image:url("../img/card_mulher_trabalhando.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -1968,7 +1972,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_58 {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/card_negocios.png");
+  background-image:url("../img/card_negocios.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -1978,7 +1982,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_59 {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/card_digital_cena.png");
+  background-image:url("../img/card_digital_cena.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -1988,7 +1992,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_60 {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/card_diploma.png");
+  background-image:url("../img/card_diploma.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -2883,11 +2887,55 @@ img {
 }
 
 div.et_pb_section.et_pb_section_9 {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/background_quem_somos_pos_internacional_2026_opt.jpg")!important
+  background-image:url("../img/background_quem_somos_pos_internacional_2026_opt.jpg")!important
 }
 
 div.et_pb_section.et_pb_section_0.page-a-hero {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/background_pos-internacional_2026_v2_opt.webp")!important
+  background-color:transparent!important;
+  background-image:url("../img/background_pos-graduacao-patologias.jpg")!important;
+  background-position:center center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important
+}
+
+.et_pb_section_0 .et_pb_image_0, .et_pb_section_0 .et_pb_image_0 .et_pb_image_wrap {
+  text-align:left
+}
+
+.et_pb_section_0 .hero-voll-logo, .et_pb_section_0 .hero-course-logo {
+  display:block;
+  width:100%;
+  height:auto
+}
+
+.et_pb_section_0 .hero-voll-logo {
+  aspect-ratio:424/18;
+  max-width:424px;
+  margin-bottom:10px
+}
+
+.et_pb_section_0 .hero-course-logo {
+  aspect-ratio:482/110;
+  max-width:560px;
+  margin:0 0 5px
+}
+
+.et_pb_section_0 .hero-inline-offer {
+  display:block!important;
+  width:100%!important;
+  max-width:420px!important;
+  margin-top:22px!important;
+  margin-right:auto!important;
+  margin-left:0!important
+}
+
+.et_pb_section_0 .et_pb_row_0 .et_pb_column_1 {
+  display:block!important;
+  background-image:url("../img/background-esqueleto-logos-voll-e-unifatec.png")!important;
+  background-position:center bottom!important;
+  background-size:auto 118%!important;
+  background-repeat:no-repeat!important;
+  min-height:560px
 }
 
 .page-a-hero .et_pb_row_1.et_pb_row.hero-offer-row {
@@ -2922,14 +2970,14 @@ a.et_pb_button[data-icon="&"]:after {
   width:18px;
   height:18px;
   margin:0!important;
-  background:url("https://vollpilates.com.br/pos-internacional/assets/img/seta_botao.png") center/contain no-repeat!important;
+  background:url("../img/seta_botao.png") center/contain no-repeat!important;
   border:0!important;
   transform:translateY(-50%)!important;
   pointer-events:none
 }
 
 a.et_pb_button_1[data-icon="&"]:after {
-  background-image:url("https://vollpilates.com.br/pos-internacional/assets/img/seta_botao_branco.png")!important
+  background-image:url("../img/seta_botao_branco.png")!important
 }
 
 a.et_pb_button[data-icon="&"]:before {

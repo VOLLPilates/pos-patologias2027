@@ -251,7 +251,7 @@
       .then(function(module) {
         var Typebot = module.default;
         Typebot.initBubble({
-          typebot: "pos-internacional",
+          typebot: "pos-patologias",
           apiHost: "https://iavoll.exerciciosdepilates.com.br",
           className: "someMN",
           previewMessage: {
