@@ -57,6 +57,9 @@
     var scrollPosition = 0;
     var scrollSpeed = 0.3;
     var isPaused = false;
+    var isInViewport = typeof window.IntersectionObserver === "undefined";
+    var animationFrameId = 0;
+    var reduceMotionQuery = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
     var loopWidth = 0;
 
     function updateLoopWidth() {
@@ -67,7 +70,10 @@
     }
 
     function scheduleLoopWidthUpdate() {
-      window.requestAnimationFrame(updateLoopWidth);
+      window.requestAnimationFrame(function() {
+        updateLoopWidth();
+        startAutoScroll();
+      });
     }
 
     updateLoopWidth();
@@ -78,29 +84,72 @@
       }
     });
 
+    function shouldAnimate() {
+      return !isPaused && isInViewport && !document.hidden && loopWidth > 0 && !(reduceMotionQuery && reduceMotionQuery.matches);
+    }
+
+    function stopAutoScroll() {
+      if (!animationFrameId) return;
+      window.cancelAnimationFrame(animationFrameId);
+      animationFrameId = 0;
+    }
+
+    function startAutoScroll() {
+      if (!animationFrameId && shouldAnimate()) {
+        animationFrameId = window.requestAnimationFrame(autoScroll);
+      }
+    }
+
     function autoScroll() {
-      if (!isPaused && loopWidth > 0) {
-        scrollPosition += scrollSpeed;
+      animationFrameId = 0;
+      if (!shouldAnimate()) return;
 
-        if (scrollPosition >= loopWidth) {
-          scrollPosition = 0;
-        }
-
-        container.style.transform = "translateX(-" + scrollPosition + "px)";
+      scrollPosition += scrollSpeed;
+      if (scrollPosition >= loopWidth) {
+        scrollPosition = 0;
       }
 
-      window.requestAnimationFrame(autoScroll);
+      container.style.transform = "translateX(-" + scrollPosition + "px)";
+      animationFrameId = window.requestAnimationFrame(autoScroll);
     }
 
     container.addEventListener("mouseenter", function() {
       isPaused = true;
+      stopAutoScroll();
     });
 
     container.addEventListener("mouseleave", function() {
       isPaused = false;
+      startAutoScroll();
     });
 
-    window.requestAnimationFrame(autoScroll);
+    if (typeof window.IntersectionObserver !== "undefined") {
+      var carouselObserver = new window.IntersectionObserver(function(entries) {
+        isInViewport = entries.some(function(entry) { return entry.isIntersecting; });
+        if (isInViewport) startAutoScroll();
+        else stopAutoScroll();
+      }, { rootMargin: "100px 0px" });
+      carouselObserver.observe(container);
+    }
+
+    document.addEventListener("visibilitychange", function() {
+      if (document.hidden) stopAutoScroll();
+      else startAutoScroll();
+    });
+
+    if (reduceMotionQuery) {
+      var handleReducedMotion = function() {
+        if (reduceMotionQuery.matches) stopAutoScroll();
+        else startAutoScroll();
+      };
+      if (typeof reduceMotionQuery.addEventListener === "function") {
+        reduceMotionQuery.addEventListener("change", handleReducedMotion);
+      } else if (typeof reduceMotionQuery.addListener === "function") {
+        reduceMotionQuery.addListener(handleReducedMotion);
+      }
+    }
+
+    startAutoScroll();
   }
 
   if (document.readyState === "loading") {
