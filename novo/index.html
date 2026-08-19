@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="preconnect" href="https://launcher.hotmart.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,700;1,800&display=swap">
     <link rel="preload" href="../assets/img/logo_vollpilates_pos-graduacao_patologias.png" as="image" type="image/png" fetchpriority="high">
     <link rel="preload" href="../assets/img/logo_pos_graduacao_patologias.png" as="image" type="image/png" fetchpriority="high">
     <link rel="preload" href="../assets/img/background_pos-graduacao-patologias.jpg" as="image" type="image/jpeg" fetchpriority="high">
@@ -144,7 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden">
                               <div class="et_pb_blurb_description">
                                 <ul style="margin: 0; padding: 0; list-style: none; font-weight: 300; line-height: 1.35;">
                                   <li style="margin-bottom: 2px;">Matrícula <strong>ISENTA</strong></li>
-                                  <li>80% de desconto na primeira mensalidade</li>
+                                  <li>80% de desconto na primeira<br> mensalidade</li>
                                 </ul>
                               </div>
                             </div>
@@ -349,7 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden">
                   </div>
                 </div>
                 <style>
-                  .capaz-de-section{position:relative;background:#2b6b6b;padding:70px 20px;overflow:hidden;}
+                  .capaz-de-section{position:relative;background:url('../assets/img/background_section4.jpg') center/cover no-repeat;padding:70px 20px;overflow:hidden;}
                   .capaz-de-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;}
                   .capaz-de-title{color:#fff;text-align:center;font-family:'Open Sans',Arial,sans-serif;font-weight:700;font-size:26px;line-height:1.3;margin:0 0 32px;text-transform:uppercase;letter-spacing:.3px;}
                   .capaz-de-grid{display:grid;grid-template-columns:repeat(5,auto);gap:13px;justify-content:center;}
@@ -370,33 +371,46 @@ height="0" width="0" style="display:none;visibility:hidden">
                   </div>
                 </div>
                 <style>
-                  .cond-especiais-section{position:relative;background:#0a3d91;padding:70px 20px 80px;overflow:hidden;font-family:'Open Sans',Arial,sans-serif;}
+                  /* ==========================================================
+                     FONTES DOS CARDS "CONDIÇÕES ESPECIAIS"
+                     Para trocar a fonte, altere APENAS as variáveis abaixo:
+                     --card-font          = fonte principal de todos os textos
+                     --card-font-highlight = fonte dos destaques (R$0, 80%)
+                     ========================================================== */
+                  .cond-especiais-section{
+                    --card-font: 'Montserrat','Open Sans',Arial,sans-serif;
+                    --card-font-highlight: 'Montserrat','Open Sans',Arial,sans-serif;
+                  }
+                  .cond-especiais-section{position:relative;background:#005EC1;padding:70px 20px 80px;overflow:hidden;font-family:'Open Sans',Arial,sans-serif;}
                   .cond-especiais-inner{position:relative;z-index:2;max-width:1140px;margin:0 auto;}
                   .cond-especiais-title{color:#fff;text-align:center;font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:2px;margin:0 0 8px;}
                   .cond-especiais-sub{color:#fff;text-align:center;font-weight:400;font-size:15px;margin:0 0 48px;}
-                  .cond-especiais-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;margin-top:40px;position:relative;}
-                  .cond-card-wrap{position:relative;}
-                  .cond-card-wrap::before{content:attr(data-num);position:absolute;top:-42px;left:50%;transform:translateX(-50%);font-size:56px;font-weight:700;color:rgba(255,255,255,.28);line-height:1;pointer-events:none;z-index:0;font-family:'Open Sans',Arial,sans-serif;letter-spacing:-1px;}
-                  .cond-card{position:relative;z-index:1;background:#fff;border-radius:16px;padding:26px 18px;text-align:center;color:#0a3d91;display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:220px;}
-                  .cond-card h3{font-size:15px;font-weight:800;text-transform:uppercase;margin:0 0 10px;line-height:1.25;color:#0a3d91;letter-spacing:.3px;}
-                  .cond-card p{font-size:13px;font-weight:500;line-height:1.4;margin:4px 0 0;color:#0a3d91;}
-                  .cond-card .price-from{font-size:13px;margin-top:auto;}
-                  .cond-card .highlight{font-size:42px;font-weight:800;color:#f5a623;line-height:1;display:block;margin-top:4px;}
-                  .cond-card--pct .pct-big{font-size:52px;font-weight:800;color:#f5a623;line-height:1;display:block;margin-bottom:4px;}
-                  .cond-card--pct .pct-label{font-size:15px;font-weight:800;color:#0a3d91;text-transform:uppercase;line-height:1.15;letter-spacing:.3px;display:block;margin-bottom:8px;}
+                  .cond-especiais-grid{display:grid;grid-template-columns:repeat(4,auto);justify-content:center;gap:22px;margin-bottom:28px;margin-top:40px;position:relative;}
+                  .cond-card-wrap{position:relative;aspect-ratio:1/1;max-width:200px;margin:0 auto;width:100%;}
+                  .cond-card-wrap::before{content:attr(data-num);position:absolute;top:-22px;right:-14px;font-size:52px;font-weight:700;color:#004F9D;opacity:1;line-height:27.93px;pointer-events:none;z-index:0;font-family:'Montserrat','Open Sans',Arial,sans-serif;font-style:italic;letter-spacing:0;}
+                  .cond-card{position:relative;z-index:1;background:#fff;border-radius:28px;padding:18px 14px;text-align:center;color:#0a3d91;display:flex;flex-direction:column;align-items:center;justify-content:space-between;width:100%;height:100%;box-sizing:border-box;}
+                  .cond-card,.cond-card *{font-family:var(--card-font);}
+                  .cond-card .highlight,.cond-card--pct .pct-big{font-family:var(--card-font-highlight);}
+                  .cond-card h3{font-size:17px;font-weight:800;text-transform:uppercase;margin:0 0 8px;line-height:1.2;color:#f5a623;letter-spacing:.3px;}
+                  .cond-card p{font-size:14px;font-weight:500;line-height:1.35;margin:4px 0 0;color:#111;}
+                  .cond-card .price-from{font-size:15px;font-weight:500;margin-top:auto;color:#111;}
+                  .cond-card .highlight{font-size:46px;font-weight:800;color:#f5a623;line-height:1;display:block;margin-top:4px;font-style:italic;}
+                  .cond-card--pct .pct-big{font-size:50px;font-weight:800;color:#f5a623;line-height:1;display:block;margin-bottom:4px;}
+                  .cond-card--pct .pct-label{font-size:17px;font-weight:800;color:#f5a623;text-transform:uppercase;line-height:1.15;letter-spacing:.3px;display:block;margin-bottom:8px;}
                   .cond-card .strike{text-decoration:line-through;opacity:.75;}
-                  .cond-card .forever{font-style:italic;font-weight:800;color:#0a3d91;}
-                  .cond-card ul{list-style:none;padding:0;margin:6px 0 0;font-size:13px;color:#0a3d91;line-height:1.5;}
+                  .cond-card .forever{font-style:italic;font-weight:800;color:#000;}
+                  .cond-card .black-bold{color:#000;font-weight:800;}
+                  .cond-card ul{list-style:none;padding:0;margin:6px 0 0;font-size:14px;color:#111;line-height:1.4;font-weight:500;}
                   .cond-card ul li::before{content:"• ";}
                   .cond-card--isencao{padding:34px 22px;justify-content:space-between;}
                   .cond-card--isencao h3{font-size:22px;color:#111;font-weight:800;line-height:1.15;margin:0;}
                   .cond-card--isencao h3 .accent{color:#f5a623;display:block;margin-top:2px;}
                   .cond-card--isencao .price-from{color:#111;font-size:16px;font-weight:500;margin:0 0 6px;}
                   .cond-card--isencao .price-from .strike{color:#111;opacity:1;text-decoration:line-through;}
-                  .cond-card--isencao .highlight{font-size:52px;color:#f5a623;font-weight:800;margin-top:0;letter-spacing:1px;}
-                  .cond-card-wrap[data-num="01"]::before{color:rgba(10,50,120,.55);font-weight:800;top:-30px;right:-6px;left:auto;transform:none;font-size:64px;font-style:italic;}
-                  .cond-bonus-card{background:#128078;border-radius:16px;padding:16px;margin-top:12px;display:flex;justify-content:center;align-items:center;}
-                  .cond-bonus-card img{max-width:100%;height:auto;border-radius:10px;display:block;}
+                  .cond-card--isencao .highlight{font-size:46px;color:#f5a623;font-weight:800;margin-top:0;letter-spacing:1px;font-style:italic;}
+                  .cond-card-wrap[data-num="01"]::before{color:#004F9D;opacity:1;font-weight:700;top:-22px;right:-14px;left:auto;transform:none;font-size:52px;font-style:italic;font-family:'Montserrat','Open Sans',Arial,sans-serif;line-height:27.93px;letter-spacing:0;}
+                  .cond-bonus-card{background:transparent;padding:0;margin-top:12px;display:flex;justify-content:center;align-items:center;}
+                  .cond-bonus-card img{max-width:100%;height:auto;display:block;}
                   .cond-cta-wrap{text-align:center;margin-top:32px;}
                   .cond-cta{display:inline-block;background:#ee8c00;color:#002628;font-weight:800;text-transform:uppercase;padding:14px 40px;border-radius:999px;text-decoration:none;font-size:14px;letter-spacing:.6px;transition:background .2s;box-shadow:0 3px 0 rgba(0,0,0,.15);}
                   .cond-cta:hover{background:#ee8c00;color:#002628;}
@@ -422,97 +436,32 @@ height="0" width="0" style="display:none;visibility:hidden">
                           <div>
                             <span class="pct-big">80%</span>
                             <span class="pct-label">De desconto</span>
-                            <p>Na primeira mensalidade</p>
+                            <p>Na primeira<br> mensalidade</p>
                           </div>
                         </div>
                       </div>
                       <div class="cond-card-wrap" data-num="03">
                         <div class="cond-card">
-                          <h3>Acesso vitalício à<br>pós-graduação</h3>
-                          <p>Tenha acesso às aulas e materiais <span class="strike">por 18 meses</span> <span class="forever">para sempre</span></p>
+                          <h3>Acesso vitalício <span class="black-bold">à<br>pós-graduação</span></h3>
+                          <p>Tenha acesso<br> às aulas e<br> materiais<br> <span class="strike">por 18 meses</span><br> <span class="forever">para sempre</span></p>
                         </div>
                       </div>
                       <div class="cond-card-wrap" data-num="04">
                         <div class="cond-card">
                           <h3>Para os<br>50 primeiros</h3>
-                          <p>Kit físico entregue em casa com:</p>
+                          <p>Kit físico entregue<br> em casa com:</p>
                           <ul>
-                            <li>2 livros da Coletânea Pilates</li>
-                            <li>Kit do aluno exclusivo VOLL</li>
+                            <li>2 livros da<br> Coletânea Pilates</li>
+                            <li>Kit do aluno<br> exclusivo VOLL</li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="cond-bonus-card">
-                      <img src="../assets/img/imagem temporario section 5.jpg" alt="Bônus: Formação em Pilates Online">
+                      <img src="../assets/img/bonus_pos-internacional_2026-v2.png" alt="Bônus: Formação em Pilates Online">
                     </div>
                     <div class="cond-cta-wrap">
                       <a href="#inscreva-se" class="cond-cta">Quero minha vaga e todos os bônus</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="et_pb_section et_pb_section_3 et_pb_with_background et_section_regular">
-                  <div class="et_pb_row et_pb_row_7">
-                    <div class="et_pb_column et_pb_column_4_4 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                      <div class="et_pb_module et_pb_text et_pb_text_11 price-limited-label et_pb_text_align_center et_pb_bg_layout_light">
-                        <div class="et_pb_text_inner">
-                          <p>
-                            Por tempo limitado
-                          </p>
-                        </div>
-                      </div>
-                      <div class="et_pb_module et_pb_text et_pb_text_12 price-offer-title et_pb_text_align_left et_pb_bg_layout_light">
-                        <div class="et_pb_text_inner">
-                          <h2>
-                            FAÇA SUA PÓS-GRADUAÇÃO EM PILATES PARA PATOLOGIAS COM
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="et_pb_row et_pb_row_8 price-offer-row">
-                    <div class="et_pb_with_border et_pb_column_4_4 et_pb_column et_pb_column_14 price-offer-card et_pb_css_mix_blend_mode_passthrough et-last-child">
-                      <div class="price-discount-card">
-                        <div class="price-discount-main">
-                          <span class="price-discount-number">
-                            50%
-                          </span>
-                          <span class="price-discount-label">
-                            DE DESCONTO
-                          </span>
-                        </div>
-                        <p class="price-discount-subtitle">
-                          NA MATRÍCULA E
-                          <br>
-                          NA 1º MENSALIDADE
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="et_pb_row et_pb_row_9">
-                    <div class="et_pb_column et_pb_column_4_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
-                      <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
-                        <a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="#inscreva-se" data-icon="&amp;">
-                          MATRICULE-SE AGORA
-                        </a>
-                      </div>
-                      <div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module ">
-                        <a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="#inscreva-se">
-                          DÚVIDAS? FALE COM NOSSA EQUIPE
-                        </a>
-                      </div>
-                      <div class="et_pb_module et_pb_image et_pb_image_9">
-                        <span class="et_pb_image_wrap has-box-shadow-overlay">
-                          <div class="box-shadow-overlay">
-                          </div>
-                          <img loading="lazy" decoding="async" width="746" height="189" src="../assets/img/bonus_pos-internacional_2026_opt.jpg" alt="" title="" class="wp-image-246125">
-                        </span>
-                      </div>
-                      <div class="et_pb_module et_pb_text et_pb_text_21  et_pb_text_align_center et_pb_bg_layout_light">
-                        <div class="et_pb_text_inner">
-                          APENAS EM AGOSTO
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -3358,12 +3307,13 @@ height="0" width="0" style="display:none;visibility:hidden">
                   </div>
                 </div>
                 <style>
-                  .cta-final-section{background:#005FC4;padding:70px 20px 60px;font-family:'Open Sans',Arial,sans-serif;}
+                  .cta-final-section{background:url('../assets/img/background_ultima_section.jpg') center/cover no-repeat;padding:70px 20px 60px;font-family:'Open Sans',Arial,sans-serif;}
                   .cta-final-inner{max-width:1140px;margin:0 auto;}
                   .cta-final-title{color:#fff;font-weight:800;font-size:26px;line-height:1.3;text-transform:uppercase;margin:0 0 22px;letter-spacing:.4px;}
                   .cta-final-desc{color:#fff;font-weight:400;font-size:16px;line-height:1.5;margin:0 0 26px;max-width:780px;}
-                  .cta-final-list{list-style:none;padding:0;margin:0 0 30px;}
-                  .cta-final-list li{color:#fff;font-weight:700;font-size:15px;text-transform:uppercase;padding:8px 0 8px 34px;position:relative;letter-spacing:.3px;}
+                  .cta-final-list{list-style:none !important;padding:0 !important;margin:0 0 30px;}
+                  .cta-final-list li{color:#fff;font-weight:700;font-size:15px;text-transform:uppercase;padding:8px 0 8px 34px;position:relative;letter-spacing:.3px;list-style:none !important;background:none !important;}
+                  .cta-final-list li::marker{content:"" !important;}
                   .cta-final-list li::before{content:"";position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;background:#2ecc71 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='5 12 10 17 19 8'/></svg>") center/14px no-repeat;}
                   .cta-final-btn{display:inline-block;background:#f5a623;color:#0a3d91;font-weight:800;text-transform:uppercase;padding:14px 40px;border-radius:8px;text-decoration:none;font-size:15px;letter-spacing:.6px;transition:background .2s;margin-bottom:34px;}
                   .cta-final-btn:hover{background:#e59512;}
@@ -3376,8 +3326,8 @@ height="0" width="0" style="display:none;visibility:hidden">
                 </style>
                 <div class="cta-final-section">
                   <div class="cta-final-inner">
-                    <h2 class="cta-final-title">Você pode continuar repetindo exercícios. Ou pode aprender a entender o movimento e tomar decisões com mais segurança no Pilates para Patologias.</h2>
-                    <p class="cta-final-desc">Dê o próximo passo para aprofundar a biomecânica, desenvolver raciocínio clínico e atender casos reais com uma conduta mais consciente no Pilates para Patologias.</p>
+                    <h2 class="cta-final-title">Você pode continuar repetindo exercícios.<br> Ou pode aprender a entender o movimento<br> e tomar decisões com mais segurança<br> no Pilates para Patologias.</h2>
+                    <p class="cta-final-desc">Dê o próximo passo para aprofundar a biomecânica, desenvolver<br> raciocínio clínico e atender casos reais com uma conduta mais<br> consciente no Pilates para Patologias.</p>
                     <ul class="cta-final-list">
                       <li>Matrícula isenta</li>
                       <li>50% de desconto na primeira mensalidade</li>
@@ -3388,10 +3338,12 @@ height="0" width="0" style="display:none;visibility:hidden">
                     <a href="#inscreva-se" class="cta-final-btn">Quero garantir minha vaga</a>
                     <div class="cta-guarantee">
                       <h4>7 dias de garantia VOLL</h4>
-                      <p>Você tem 7 dias para conhecer a formação. Se perceber que este não é o momento certo, pode solicitar o cancelamento dentro do período de garantia. Aproveite as condições de lançamento e faça sua pré-matrícula agora.</p>
+                      <p>Você tem 7 dias para conhecer a formação. Se perceber que este não é o momento certo, pode solicitar o<br> cancelamento dentro do período de garantia. Aproveite as condições de lançamento e faça sua pré-matrícula agora.</p>
                     </div>
                     <div class="cta-final-logos">
-                      <img src="https://vollpilates.com.br/pos-internacional/assets/img/selo_voll_mais_unifatec_paises_opt.webp" alt="VOLL + UniFatec">
+                      <img src="../assets/img/logo_VOLL.png" alt="VOLL Pilates">
+                      <img src="../assets/img/Logo_unifatec.png" alt="UniFatec">
+                      <img src="../assets/img/imagem_diploma.png" alt="Diploma MEC">
                     </div>
                   </div>
                 </div>
