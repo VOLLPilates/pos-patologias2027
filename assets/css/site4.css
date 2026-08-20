@@ -4648,7 +4648,36 @@ div.et_pb_section.et_pb_section_1 {
 }
 
 /* Mobile rows: full viewport width with consistent horizontal spacing */
+.et_pb_row_5 .et_pb_text_8.et_pb_module {
+  width:100%;
+  max-width:100%!important
+}
+
 @media only screen and (max-width:767px) {
+  body #page-container .et_pb_section a.et_pb_button_0[href="#inscreva-se"],
+  body #page-container .et_pb_section a.et_pb_button_3[href="#inscreva-se"],
+  body #page-container .et_pb_section a.et_pb_button_4[href="#inscreva-se"],
+  body #page-container .et_pb_section a.et_pb_button_5[href="#inscreva-se"],
+  body #page-container .et_pb_section a.et_pb_button_30[href="#inscreva-se"],
+  body #page-container .et_pb_section a.et_pb_button_31[href="#inscreva-se"],
+  body .cta-final-section a.cta-final-btn[href="#inscreva-se"],
+  body #page-container .et_pb_section a.et_pb_button_0[href="#inscreva-se"]:hover,
+  body #page-container .et_pb_section a.et_pb_button_3[href="#inscreva-se"]:hover,
+  body #page-container .et_pb_section a.et_pb_button_4[href="#inscreva-se"]:hover,
+  body #page-container .et_pb_section a.et_pb_button_5[href="#inscreva-se"]:hover,
+  body #page-container .et_pb_section a.et_pb_button_30[href="#inscreva-se"]:hover,
+  body #page-container .et_pb_section a.et_pb_button_31[href="#inscreva-se"]:hover,
+  body .cta-final-section a.cta-final-btn[href="#inscreva-se"]:hover {
+    font-size:17px!important;
+    padding-right:15px!important;
+    padding-left:15px!important
+  }
+
+  .et_pb_section_0 .et_pb_text_1a,
+  .et_pb_section_0 .et_pb_text_1a h2 {
+    text-align:center!important
+  }
+
   #page-container .et_pb_row {
     width:100%!important;
     max-width:100%!important;
