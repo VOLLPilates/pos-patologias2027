@@ -910,7 +910,7 @@
                   </div>
                 </div>
                 <style>
-                  /* ===== GRADE CURRICULAR - AJUSTE MOBILE: tabela com rolagem horizontal ===== */
+                  /* ===== GRADE CURRICULAR - AJUSTE RESPONSIVO ===== */
                   @media only screen and (max-width:980px){
                     .dvmd_table_maker .et_pb_module_inner{overflow-x:auto!important;-webkit-overflow-scrolling:touch;}
                     .dvmd_table_maker .dvmd_tm_table{display:grid!important;grid-template-columns:minmax(260px,3fr) minmax(130px,1.2fr) minmax(110px,1.1fr)!important;grid-auto-rows:minmax(46px,auto)!important;min-width:520px;column-gap:6px;row-gap:6px;}
@@ -920,6 +920,24 @@
                     /* cabecalho fixo no topo ao rolar */
                     .dvmd_table_maker .dvmd_tm_tcell.dvmd_tm_chead{position:sticky!important;top:0!important;z-index:5!important;}
                     .dvmd_table_maker .dvmd_tm_tcell .dvmd_tm_cdata,.dvmd_table_maker .dvmd_tm_tcell.dvmd_tm_chead .dvmd_tm_cdata{font-size:13px!important;line-height:1.35!important;word-break:normal!important;overflow-wrap:normal!important;hyphens:none!important;}
+                  }
+                  @media only screen and (max-width:767px){
+                    .dvmd_table_maker{margin-bottom:18px!important;}
+                    .dvmd_table_maker .et_pb_module_inner{overflow-x:visible!important;}
+                    .dvmd_table_maker .dvmd_tm_table{display:block!important;min-width:0!important;width:100%!important;}
+                    .dvmd_table_maker .dvmd_tm_tblock{display:block!important;}
+                    .dvmd_table_maker .dvmd_tm_trow{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:1px!important;margin-bottom:10px!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:8px!important;background:rgba(255,255,255,.08)!important;overflow:hidden!important;}
+                    .dvmd_table_maker .dvmd_tm_trow_0{display:none!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell{display:flex!important;grid-area:auto!important;grid-row:auto!important;min-width:0!important;border:0!important;background:rgba(255,255,255,.07)!important;padding:10px 12px!important;text-align:left!important;justify-content:flex-start!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="1"]{grid-column:1 / -1!important;background:rgba(0,154,146,.24)!important;padding-top:12px!important;padding-bottom:12px!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="2"]{grid-column:1 / 2!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="3"]{grid-column:2 / 3!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell:before{display:block;margin-bottom:4px;color:#8fdcff;font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-size:10px;font-weight:700;line-height:1.1;text-transform:uppercase;}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="1"]:before{content:"Disciplina";}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="2"]:before{content:"Professor";}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="3"]:before{content:"Data";}
+                    .dvmd_table_maker .dvmd_tm_tcell .dvmd_tm_cdata{font-size:13px!important;line-height:1.35!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell[aria-colindex="1"] .dvmd_tm_cdata{font-size:14px!important;font-weight:700!important;}
                   }
                 </style>
                 <div class="et_pb_section et_pb_section_5 et_pb_with_background et_section_regular">
