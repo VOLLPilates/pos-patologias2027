@@ -3089,6 +3089,11 @@ div.et_pb_section.et_pb_section_0.page-a-hero {
   text-align:center
 }
 
+.et_pb_section_0 .hero-visual-image picture {
+  display:block;
+  width:100%
+}
+
 .et_pb_section_0 .hero-visual-img {
   display:block;
   width:100%;
@@ -4650,5 +4655,29 @@ div.et_pb_section.et_pb_section_1 {
     padding-right:30px!important;
     padding-left:30px!important;
     box-sizing:border-box
+  }
+}
+
+/* Keep below-the-fold sections out of the initial style/layout pass. The
+   browser renders them normally before they approach the viewport. */
+@supports (content-visibility:auto) {
+  .et_builder_inner_content > .et_pb_section_2,
+  .et_builder_inner_content > .capaz-de-section,
+  .et_builder_inner_content > .cond-especiais-section,
+  .et_builder_inner_content > .et_pb_section_4,
+  .et_builder_inner_content > .et_pb_section_5,
+  .et_builder_inner_content > .et_pb_section_6,
+  .et_builder_inner_content > .et_pb_section_7,
+  .et_builder_inner_content > .et_pb_section_8,
+  .et_builder_inner_content > .et_pb_section_9,
+  .et_builder_inner_content > .et_pb_section_10,
+  .et_builder_inner_content > .cta-final-section,
+  .et_builder_inner_content > .et_pb_section_11 {
+    content-visibility:auto;
+    contain-intrinsic-size:auto 900px;
+  }
+
+  .et_builder_inner_content > .et_pb_section_7 {
+    contain-intrinsic-size:auto 1600px;
   }
 }
