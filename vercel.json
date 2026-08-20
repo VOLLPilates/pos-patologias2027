@@ -1,6 +1,46 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/pos-patologias/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/pos-patologias/llms.txt",
+      "destination": "/llms.txt"
+    },
+    {
+      "source": "/pos-patologias/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/pos-patologias",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/pos-patologias/",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
+    {
+      "source": "/pos-patologias/assets/img/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/pos-patologias/assets/css/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/pos-patologias/assets/js/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
     {
       "source": "/assets/img/:path*",
       "headers": [

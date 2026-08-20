@@ -1070,7 +1070,7 @@
 
 div.et_pb_section.et_pb_section_0 {
   background-color:transparent!important;
-  background-image:url("../img/background_pos-graduacao-patologias.jpg")!important;
+  background-image:url("/pos-patologias/assets/img/background_pos-graduacao-patologias.jpg")!important;
   background-position:center center!important;
   background-size:cover!important;
   background-repeat:no-repeat!important
@@ -1295,12 +1295,12 @@ body #page-container .et_pb_section .et_pb_button_0:after, body #page-container 
 div.et_pb_section.et_pb_section_2 {
   background-position:center center;
   background-size:cover;
-  background-image:url("../img/background_pos-patologias_section_conecta.jpg")!important
+  background-image:url("/pos-patologias/assets/img/background_pos-patologias_section_conecta.jpg")!important
 }
 
 div.et_pb_section.et_pb_section_6, div.et_pb_section.et_pb_section_7 {
   background-position:center top;
-  background-image:url("../img/background_pos_graduacao_internacional_2026_opt.jpg")!important
+  background-image:url("/pos-patologias/assets/img/background_pos_graduacao_internacional_2026_opt.jpg")!important
 }
 
 .et_pb_section_2.et_pb_section, .et_pb_section_6.et_pb_section, .et_pb_section_7.et_pb_section, .et_pb_section_9.et_pb_section, .et_pb_section_10.et_pb_section {
@@ -1906,7 +1906,7 @@ body #page-container .et_pb_section .et_pb_button_6:hover, body #page-container 
 
 div.et_pb_section.et_pb_section_10 {
   background-position:center top;
-  background-image:url("../img/background_duvidas_frequentes_opt.jpg")!important
+  background-image:url("/pos-patologias/assets/img/background_duvidas_frequentes_opt.jpg")!important
 }
 
 .et_pb_text_100 h2 {
@@ -1998,7 +1998,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_57 {
-  background-image:url("../img/card_mulher_trabalhando.png");
+  background-image:url("/pos-patologias/assets/img/card_mulher_trabalhando.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -2008,7 +2008,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_58 {
-  background-image:url("../img/card_negocios.png");
+  background-image:url("/pos-patologias/assets/img/card_negocios.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -2018,7 +2018,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_59 {
-  background-image:url("../img/card_digital_cena.png");
+  background-image:url("/pos-patologias/assets/img/card_digital_cena.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -2028,7 +2028,7 @@ div.et_pb_section.et_pb_section_10 {
 }
 
 .et_pb_column_60 {
-  background-image:url("../img/card_diploma.png");
+  background-image:url("/pos-patologias/assets/img/card_diploma.png");
   border-radius:10px 10px 10px 10px;
   overflow:hidden;
   padding-top:30px;
@@ -2923,12 +2923,12 @@ img {
 }
 
 div.et_pb_section.et_pb_section_9 {
-  background-image:url("../img/background_quem_somos_pos_internacional_2026_opt.jpg")!important
+  background-image:url("/pos-patologias/assets/img/background_quem_somos_pos_internacional_2026_opt.jpg")!important
 }
 
 div.et_pb_section.et_pb_section_0.page-a-hero {
   background-color:transparent!important;
-  background-image:url("../img/background_pos-graduacao-patologias.jpg")!important;
+  background-image:url("/pos-patologias/assets/img/background_pos-graduacao-patologias.jpg")!important;
   background-position:center center!important;
   background-size:cover!important;
   background-repeat:no-repeat!important
@@ -3134,14 +3134,14 @@ a.et_pb_button[data-icon="&"]:after {
   width:18px;
   height:18px;
   margin:0!important;
-  background:url("../img/seta_botao.png") center/contain no-repeat!important;
+  background:url("/pos-patologias/assets/img/seta_botao.png") center/contain no-repeat!important;
   border:0!important;
   transform:translateY(-50%)!important;
   pointer-events:none
 }
 
 a.et_pb_button_1[data-icon="&"]:after {
-  background-image:url("../img/seta_botao_branco.png")!important
+  background-image:url("/pos-patologias/assets/img/seta_botao_branco.png")!important
 }
 
 a.et_pb_button[data-icon="&"]:before {
