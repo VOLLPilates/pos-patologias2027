@@ -1104,7 +1104,7 @@ div.et_pb_section.et_pb_section_0 {
 .et_pb_text_0 {
   line-height:1.5em;
   font-family:'Montserrat', Helvetica, Arial, Lucida, sans-serif;
-  font-size:19px;
+  font-size:18px;
   line-height:1.5em;
   margin-bottom:20px!important
 }
@@ -3054,13 +3054,47 @@ div.et_pb_section.et_pb_section_0.page-a-hero {
   }
 }
 
-.et_pb_section_0 .et_pb_row_0 .et_pb_column_1 {
-  display:block!important;
-  background-image:url("../img/background-esqueleto-logos-voll-e-unifatec.png")!important;
-  background-position:center bottom!important;
-  background-size:auto 118%!important;
-  background-repeat:no-repeat!important;
-  min-height:560px
+@media (min-width:981px) {
+  .et_pb_section_0 .et_pb_row_0 {
+    display:flex!important;
+    align-items:center!important
+  }
+
+  .et_pb_section_0 .et_pb_row_0 .et_pb_column_0 {
+    width:40%!important;
+    flex:0 0 40%!important;
+    margin-right:0!important
+  }
+
+  .et_pb_section_0 .et_pb_row_0 .et_pb_column_1 {
+    width:60%!important;
+    flex:0 0 60%!important;
+    margin-right:0!important
+  }
+}
+
+.et_pb_section_0 .et_pb_row_0 .hero-visual-column {
+  display:flex!important;
+  align-items:flex-end!important;
+  justify-content:center!important;
+  background-image:none!important;
+  min-height:0
+}
+
+.et_pb_section_0 .hero-visual-image,
+.et_pb_section_0 .hero-visual-image .et_pb_image_wrap {
+  display:block;
+  width:100%;
+  margin:0!important;
+  text-align:center
+}
+
+.et_pb_section_0 .hero-visual-img {
+  display:block;
+  width:100%;
+  max-width:760px;
+  height:auto;
+  margin:0 auto
 }
 
 .page-a-hero .et_pb_row_1.et_pb_row.hero-offer-row {
@@ -4605,5 +4639,16 @@ div.et_pb_section.et_pb_section_1 {
 
   .price-discount-subtitle {
     font-size:19px
+  }
+}
+
+/* Mobile rows: full viewport width with consistent horizontal spacing */
+@media only screen and (max-width:767px) {
+  #page-container .et_pb_row {
+    width:100%!important;
+    max-width:100%!important;
+    padding-right:30px!important;
+    padding-left:30px!important;
+    box-sizing:border-box
   }
 }
