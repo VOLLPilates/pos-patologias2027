@@ -1,4 +1,50 @@
 (function(){
+  // Third-party applications are the heaviest part of this page. Load them only
+  // when they are useful, keeping the initial render entirely local.
+  function loadGoogleTagManager() {
+    if (window.__vollGtmLoaded) return;
+    window.__vollGtmLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NQ2TP3Q3";
+    document.head.appendChild(script);
+
+    ["pointerdown", "keydown", "touchstart", "scroll"].forEach(function(eventName) {
+      window.removeEventListener(eventName, loadGoogleTagManager);
+    });
+  }
+
+  ["pointerdown", "keydown", "touchstart", "scroll"].forEach(function(eventName) {
+    window.addEventListener(eventName, loadGoogleTagManager, { once: true, passive: true });
+  });
+  window.setTimeout(loadGoogleTagManager, 45000);
+
+  function setupEnrollmentForm() {
+    var frame = document.querySelector('#form-oficial iframe[data-src]');
+    if (!frame) return;
+
+    function loadFrame() {
+      if (!frame.dataset.src) return;
+      frame.src = frame.dataset.src;
+      frame.removeAttribute("data-src");
+    }
+
+    if (typeof window.IntersectionObserver === "undefined") {
+      loadFrame();
+      return;
+    }
+
+    var formObserver = new window.IntersectionObserver(function(entries) {
+      if (!entries.some(function(entry) { return entry.isIntersecting; })) return;
+      formObserver.disconnect();
+      loadFrame();
+    }, { rootMargin: "300px 0px" });
+    formObserver.observe(frame);
+  }
+
   var dataEl = document.getElementById("curriculos-data");
   var curriculos = {};
   try { curriculos = dataEl ? JSON.parse(dataEl.textContent) : {}; } catch (error) { curriculos = {}; }
@@ -152,10 +198,31 @@
     startAutoScroll();
   }
 
+  function scheduleTestimonialsCarousel() {
+    var container = document.getElementById("vollCarouselContainer");
+    if (!container) return;
+    if (typeof window.IntersectionObserver === "undefined") {
+      setupTestimonialsCarousel();
+      return;
+    }
+
+    var carouselSetupObserver = new window.IntersectionObserver(function(entries) {
+      if (!entries.some(function(entry) { return entry.isIntersecting; })) return;
+      carouselSetupObserver.disconnect();
+      setupTestimonialsCarousel();
+    }, { rootMargin: "500px 0px" });
+    carouselSetupObserver.observe(container);
+  }
+
+  function setupDeferredFeatures() {
+    setupEnrollmentForm();
+    scheduleTestimonialsCarousel();
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setupTestimonialsCarousel);
+    document.addEventListener("DOMContentLoaded", setupDeferredFeatures);
   } else {
-    setupTestimonialsCarousel();
+    setupDeferredFeatures();
   }
 
   document.addEventListener("click", function(event) {
