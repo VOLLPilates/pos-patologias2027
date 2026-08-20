@@ -17,7 +17,11 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon_voll_pilates_institucional.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;700&display=swap">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://portal.grupovoll.com.br">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;700&display=swap" media="print" onload="this.media='all';this.onload=null;">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;700&display=swap"></noscript>
     <link rel="preload" href="assets/img/logo_vollpilates_pos-graduacao_patologias.png" as="image" type="image/png" fetchpriority="high">
     <link rel="preload" href="assets/img/logo_pos_graduacao_patologias.png" as="image" type="image/png" fetchpriority="high">
     <link rel="preload" href="assets/img/background_pos-graduacao-patologias.jpg" as="image" type="image/jpeg" fetchpriority="high">
@@ -150,7 +154,7 @@
                     <div class="et_pb_column et_pb_column_1_2 et_pb_column_1 hero-visual-column et_pb_css_mix_blend_mode_passthrough et-last-child">
                       <div class="et_pb_module et_pb_image hero-visual-image">
                         <span class="et_pb_image_wrap ">
-                          <img fetchpriority="high" decoding="async" width="760" height="765" src="assets/img/background-esqueleto-logos-voll-e-unifatec.png" alt="Pós-Graduação em Pilates para Patologias VOLL Pilates e UniFatec" title="" class="hero-visual-img">
+                          <img fetchpriority="high" decoding="async" width="760" height="765" src="assets/img/background-esqueleto-logos-voll-e-unifatec.webp" alt="Pós-Graduação em Pilates para Patologias VOLL Pilates e UniFatec" title="" class="hero-visual-img">
                         </span>
                       </div>
                     </div>
@@ -284,7 +288,7 @@
                   </div>
                   <div class="et_pb_row" style="max-width: 840px; border-radius: 10px; overflow: hidden;">
                     <div id="form-oficial" style="border-radius: 10px; overflow: hidden;">
-                    <iframe src="https://portal.grupovoll.com.br/?publicFormId=a86e94ec-baac-440d-924c-67427f1d717c&embed=true" width="100%" height="800px" frameborder="0" style="border:0;max-width:100%;border-radius:10px;display:block;"></iframe>
+                    <iframe src="https://portal.grupovoll.com.br/?publicFormId=a86e94ec-baac-440d-924c-67427f1d717c&embed=true" width="100%" height="800px" frameborder="0" loading="lazy" style="border:0;max-width:100%;border-radius:10px;display:block;"></iframe>
                     </div>
                     <div id="form-representante"></div>
                   </div>
@@ -338,7 +342,7 @@
                     <div class="et_pb_column et_pb_column_1_2 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
                       <div class="et_pb_module et_pb_image et_pb_image_6">
                         <span class="et_pb_image_wrap ">
-                          <img loading="lazy" decoding="async" width="489" height="521" src="assets/img/selos_qualidade_pos-graduacao.png" alt="" title="" class="wp-image-246049">
+                          <img loading="lazy" decoding="async" width="489" height="521" src="assets/img/selos_qualidade_pos-graduacao.webp" alt="" title="" class="wp-image-246049">
                         </span>
                       </div>
                     </div>
@@ -422,7 +426,7 @@
                   .cond-especiais-section .cond-cta-wrap .et_pb_button_0:hover{background-image:initial!important;transform:scaleX(1.03) scaleY(1.03)!important;}
                   .cond-especiais-section .cond-cta-wrap .et_pb_button_0:before,
                   .cond-especiais-section .cond-cta-wrap .et_pb_button_0:after{content:none!important;display:none!important;}
-                  @media (max-width:900px){.cond-especiais-grid{grid-template-columns:repeat(2,1fr);}.cond-card-wrap::before{font-size:24px;top:-18px;}}
+                  @media (max-width:900px){.cond-especiais-grid{grid-template-columns:repeat(2,1fr);}}
                   @media (max-width:520px){.cond-especiais-grid{grid-template-columns:1fr;}}
                 </style>
                 <div class="cond-especiais-section">
@@ -905,6 +909,19 @@
                     </div>
                   </div>
                 </div>
+                <style>
+                  /* ===== GRADE CURRICULAR - AJUSTE MOBILE: tabela com rolagem horizontal ===== */
+                  @media only screen and (max-width:980px){
+                    .dvmd_table_maker .et_pb_module_inner{overflow-x:auto!important;-webkit-overflow-scrolling:touch;}
+                    .dvmd_table_maker .dvmd_tm_table{display:grid!important;grid-template-columns:minmax(260px,3fr) minmax(130px,1.2fr) minmax(110px,1.1fr)!important;grid-auto-rows:minmax(46px,auto)!important;min-width:520px;column-gap:6px;row-gap:6px;}
+                    .dvmd_table_maker .dvmd_tm_tblock,.dvmd_table_maker .dvmd_tm_trow{display:contents!important;}
+                    /* anula o posicionamento fixo (grid-area) do layout empilhado, que causava textos sobrepostos */
+                    .dvmd_table_maker .dvmd_tm_tcell{grid-area:auto!important;grid-column:auto!important;grid-row:auto!important;padding:8px 10px!important;}
+                    /* cabecalho fixo no topo ao rolar */
+                    .dvmd_table_maker .dvmd_tm_tcell.dvmd_tm_chead{position:sticky!important;top:0!important;z-index:5!important;}
+                    .dvmd_table_maker .dvmd_tm_tcell .dvmd_tm_cdata,.dvmd_table_maker .dvmd_tm_tcell.dvmd_tm_chead .dvmd_tm_cdata{font-size:13px!important;line-height:1.35!important;word-break:normal!important;overflow-wrap:normal!important;hyphens:none!important;}
+                  }
+                </style>
                 <div class="et_pb_section et_pb_section_5 et_pb_with_background et_section_regular">
                   <div class="et_pb_row et_pb_row_13" style="background-color: transparent !important;">
                     <div class="et_pb_column et_pb_column_4_4 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough et-last-child" style="background-color: transparent !important;">
