@@ -46,8 +46,8 @@
       .oferta-lancamento-faixa{position:relative;width:100%;background:#7cb342;overflow:hidden;padding:5px 0;font-family:'Open Sans',Arial,sans-serif;z-index:100;}
       .oferta-lancamento-track{display:flex;width:max-content;animation:oferta-marquee 25s linear infinite;}
       .oferta-lancamento-item{display:inline-flex;align-items:center;gap:10px;padding:0 18px;color:#fff;font-size:16px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;white-space:nowrap;}
-      .oferta-lancamento-item a{display:inline-block;background:#4ea8e0;color:#000;padding:10px 12px;border-radius:999px;font-size:16px;font-weight:700;text-decoration:none;letter-spacing:.3px;transition:background .2s;}
-      .oferta-lancamento-item a:hover{background:#7ac0ec;}
+      .oferta-lancamento-item a{display:inline-flex;align-items:center;background:rgba(255,255,255,.24);color:#002628;padding:2px 8px;border-radius:4px;font-size:15px;font-weight:800;text-decoration:none;letter-spacing:.3px;line-height:1.2;transition:background .2s,color .2s;}
+      .oferta-lancamento-item a:hover{background:rgba(255,255,255,.34);color:#002628;}
       @keyframes oferta-marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
       .oferta-lancamento-faixa:hover .oferta-lancamento-track{animation-play-state:paused;}
       @media (prefers-reduced-motion:reduce){.oferta-lancamento-track{animation:none;}}
