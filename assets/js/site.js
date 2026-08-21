@@ -382,11 +382,11 @@
       .then(function(module) {
         var Typebot = module.default;
         Typebot.initBubble({
-          typebot: "pos-patologias",
+          typebot: "pos-patologias-2026",
           apiHost: "https://iavoll.exerciciosdepilates.com.br",
           className: "someMN",
           previewMessage: {
-            message: "Ola, tem alguma duvida?",
+            message: "Olá, tem alguma dúvida?",
             autoShowDelay: 15000,
             avatarUrl: "https://vollpilates.com.br/wp-content/uploads/2024/07/curso_de_pilates_lgo_voll_pilates.webp"
           },
