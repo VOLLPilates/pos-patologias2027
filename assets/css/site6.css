@@ -4270,7 +4270,7 @@ body .et_pb_bg_layout_light.et_pb_button:hover, body .et_pb_bg_layout_light .et_
 }
 
 div.et_pb_section.et_pb_section_1 {
-  background-color:rgb(248 250 252 / 1)!important;
+  background-color:#8fa750!important;
   background-image:none!important
 }
 
@@ -4290,7 +4290,7 @@ div.et_pb_section.et_pb_section_1 {
   font-family:'Montserrat', Helvetica, Arial, Lucida, sans-serif;
   font-weight:900!important;
   font-size:22px;
-  color:#202829!important;
+  color:#FFFFFF!important;
   line-height:1.4em;
   text-align:center
 }
@@ -4310,7 +4310,7 @@ div.et_pb_section.et_pb_section_1 {
 }
 
 .et_pb_text_7.et_pb_text {
-  color:#202829!important
+  color:#FFFFFF!important
 }
 
 .et_pb_text_7 {
@@ -4550,14 +4550,13 @@ body #page-container #form-oficial iframe {
 }
 
 body #page-container #form-oficial {
-  height:1300px;
   margin-right:auto;
   margin-left:auto;
 }
 
 body #page-container #form-oficial .form-oficial-iframe {
   display:block;
-  height:1300px;
+  height:660px;
   min-height:0!important;
   border:0!important;
   overflow:auto!important;
