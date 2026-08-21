@@ -9,6 +9,13 @@ build/
 # Archives
 *.zip
 
+# Video files
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
+
 # Environment files
 .env
 .env.*

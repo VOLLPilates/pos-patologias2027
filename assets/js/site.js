@@ -49,22 +49,36 @@
   var curriculos = {};
   try { curriculos = dataEl ? JSON.parse(dataEl.textContent) : {}; } catch (error) { curriculos = {}; }
 
-  // Lazy-load YouTube videos only after the visitor clicks the thumbnail.
-  function carregarVideo(thumbnailId, containerId, videoId) {
-    var thumbnail = document.getElementById(thumbnailId);
-    var container = document.getElementById(containerId);
-    if (!thumbnail || !container) return;
-    thumbnail.style.display = "none";
-    container.innerHTML = '<iframe loading="lazy" width="520" height="292" style="border-radius: 10px; max-width: 100%;" src="https://www.youtube.com/embed/' + videoId + '" title="Curso de Pilates Formação Completa Presencial da VOLL Pilates!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  function setupDepoimentoVideo() {
+    var posterButton = document.querySelector(".depoimento-video-poster");
+    if (!posterButton || posterButton.dataset.ready === "true") return;
+    posterButton.dataset.ready = "true";
+
+    posterButton.addEventListener("click", function() {
+      var src = posterButton.getAttribute("data-video-src");
+      if (!src) return;
+
+      var video = document.createElement("video");
+      video.className = "depoimento-video-player";
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      video.width = 1280;
+      video.height = 720;
+      video.poster = posterButton.getAttribute("data-video-poster") || "";
+      video.setAttribute("aria-label", posterButton.getAttribute("aria-label") || "Depoimento em vídeo");
+
+      var source = document.createElement("source");
+      source.src = src;
+      source.type = "video/mp4";
+      video.appendChild(source);
+      video.appendChild(document.createTextNode("Seu navegador não suporta vídeo HTML5."));
+
+      posterButton.replaceWith(video);
+      video.play().catch(function() {});
+    });
   }
-
-  window.carregarVideo1 = function() {
-    carregarVideo("video1Thumbnail", "video1Container", "iyME8e6su80");
-  };
-
-  window.carregarVideo2 = function() {
-    carregarVideo("video2Thumbnail", "video2Container", "h50AHMrwpg4");
-  };
 
   // Testimonials carousel: duplicates cards only when needed and keeps the loop smooth.
   function setupTestimonialsCarousel() {
@@ -216,6 +230,7 @@
 
   function setupDeferredFeatures() {
     setupEnrollmentForm();
+    setupDepoimentoVideo();
     scheduleTestimonialsCarousel();
   }
 
