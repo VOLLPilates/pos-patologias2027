@@ -6,6 +6,9 @@ dist/
 build/
 .vercel/
 
+# Archives
+*.zip
+
 # Environment files
 .env
 .env.*
