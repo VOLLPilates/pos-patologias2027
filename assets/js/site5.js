@@ -49,37 +49,6 @@
   var curriculos = {};
   try { curriculos = dataEl ? JSON.parse(dataEl.textContent) : {}; } catch (error) { curriculos = {}; }
 
-  function setupDepoimentoVideo() {
-    var posterButton = document.querySelector(".depoimento-video-poster");
-    if (!posterButton || posterButton.dataset.ready === "true") return;
-    posterButton.dataset.ready = "true";
-
-    posterButton.addEventListener("click", function() {
-      var src = posterButton.getAttribute("data-video-src");
-      if (!src) return;
-
-      var video = document.createElement("video");
-      video.className = "depoimento-video-player";
-      video.controls = true;
-      video.autoplay = true;
-      video.playsInline = true;
-      video.preload = "metadata";
-      video.width = 1280;
-      video.height = 720;
-      video.poster = posterButton.getAttribute("data-video-poster") || "";
-      video.setAttribute("aria-label", posterButton.getAttribute("aria-label") || "Depoimento em vídeo");
-
-      var source = document.createElement("source");
-      source.src = src;
-      source.type = "video/mp4";
-      video.appendChild(source);
-      video.appendChild(document.createTextNode("Seu navegador não suporta vídeo HTML5."));
-
-      posterButton.replaceWith(video);
-      video.play().catch(function() {});
-    });
-  }
-
   // Testimonials carousel: duplicates cards only when needed and keeps the loop smooth.
   function setupTestimonialsCarousel() {
     var container = document.getElementById("vollCarouselContainer");
@@ -230,7 +199,6 @@
 
   function setupDeferredFeatures() {
     setupEnrollmentForm();
-    setupDepoimentoVideo();
     scheduleTestimonialsCarousel();
   }
 
