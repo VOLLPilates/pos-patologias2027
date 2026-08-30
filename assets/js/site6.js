@@ -23,7 +23,7 @@
   window.setTimeout(loadGoogleTagManager, 45000);
 
   function setupEnrollmentForm() {
-    var frame = document.querySelector('#form-oficial iframe[data-src]');
+    var frame = document.querySelector('#form-oficial iframe[data-src], #form-oficial1 iframe[data-src], .form-oficial-iframe[data-src]');
     if (!frame) return;
 
     function loadFrame() {

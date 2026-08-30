@@ -4544,17 +4544,21 @@ body #page-container .form-iframe-row.et_pb_row {
 }
 
 body #page-container #form-oficial,
-body #page-container #form-oficial iframe {
+body #page-container #form-oficial1,
+body #page-container #form-oficial iframe,
+body #page-container #form-oficial1 iframe {
   width:100%!important;
   max-width:640px!important;
 }
 
-body #page-container #form-oficial {
+body #page-container #form-oficial,
+body #page-container #form-oficial1 {
   margin-right:auto;
   margin-left:auto;
 }
 
-body #page-container #form-oficial .form-oficial-iframe {
+body #page-container #form-oficial .form-oficial-iframe,
+body #page-container #form-oficial1 .form-oficial-iframe {
   display:block;
   height:660px;
   min-height:0!important;
